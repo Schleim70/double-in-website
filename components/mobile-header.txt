@@ -1,0 +1,9 @@
+<header class="mobile-header">
+  <a class="mobile-brand" href="index.html" aria-label="Double In – zur Startseite">
+    <img src="assets/images/logo.png" alt="" class="mobile-header-logo">
+    <span class="mobile-header-title">Double In</span>
+  </a>
+  <button class="burger" type="button" aria-label="Menü öffnen" aria-controls="mobileMenu" aria-expanded="false" onclick="toggleMobileMenu()">
+    <span class="line"></span><span class="line"></span><span class="line"></span>
+  </button>
+</header>

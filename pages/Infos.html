@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<base href="../">
+
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+
+    <title>Kalender - Double In</title>
+
+<link rel="stylesheet" media="screen and (min-width: 900px)" href="css/style.css">
+<link rel="stylesheet" media="screen and (max-width: 899px)" href="css/mobile.css">
+
+<style>
+@media (max-width: 899px) {
+
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .mobile-content {
+            flex: 1;
+        }
+
+}
+</style>
+
+</head>
+<body>
+<div class="desktop-view">
+<div data-component="sidebar"></div>
+<div data-component="desktop-navigation"></div>
+    <div data-component="back-button"></div>
+<main class="calendar-page">
+    <header class="calendar-page-heading">
+        <div data-component="page-heading" data-kicker="Double In" data-title="Kalender"></div>
+        <p>Alle kommenden Termine im Überblick.</p>
+    </header>
+    <a class="calendar-open-link" href="https://calendar.google.com/calendar/u/0?cid=d7c7e1237b6e298e0347fb7cff2fc3ee5ace851c7f5a76e2d0da0550deb7a4b1%40group.calendar.google.com" target="_blank" rel="noopener noreferrer">
+        <span>Kalender in Google öffnen</span><span class="animated-arrow calendar-open-arrow" aria-hidden="true">➜</span>
+    </a>
+    <div class="calendar-card" role="region" aria-label="Veranstaltungskalender">
+        <iframe
+            title="Google Kalender – Double In"
+            src="https://calendar.google.com/calendar/embed?src=d7c7e1237b6e298e0347fb7cff2fc3ee5ace851c7f5a76e2d0da0550deb7a4b1%40group.calendar.google.com&amp;ctz=Europe%2FBerlin&amp;mode=MONTH&amp;showTitle=0&amp;showNav=1&amp;showDate=1&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;bgcolor=%230e202f"
+            loading="lazy">
+        </iframe>
+    </div>
+</main>
+</div>
+<div class="mobile-view">
+<div data-component="mobile-header"></div>
+
+<div data-component="mobile-navigation"></div>
+
+<div class="mobile-content">
+    <div data-component="page-heading" data-kicker="Double In" data-title="Kalender" data-heading-level="2" data-heading-class="mobile-page-heading" data-title-class="mobile-page-title"></div>
+    <a class="mobile-calendar-open-link" href="https://calendar.google.com/calendar/u/0?cid=d7c7e1237b6e298e0347fb7cff2fc3ee5ace851c7f5a76e2d0da0550deb7a4b1%40group.calendar.google.com" target="_blank" rel="noopener noreferrer">
+        <span>Kalender in Google öffnen</span><span class="animated-arrow calendar-open-arrow" aria-hidden="true">➜</span>
+    </a>
+    <div class="mobile-calendar-wrap">
+        <iframe
+            title="Google Kalender – Double In"
+            src="https://calendar.google.com/calendar/embed?src=d7c7e1237b6e298e0347fb7cff2fc3ee5ace851c7f5a76e2d0da0550deb7a4b1%40group.calendar.google.com&amp;ctz=Europe%2FBerlin&amp;mode=MONTH&amp;showTitle=0&amp;showNav=1&amp;showDate=1&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;bgcolor=%230e202f"
+            loading="lazy">
+        </iframe>
+    </div>
+</div>
+
+<div data-component="mobile-footer"></div>
+</div>
+<script src="js/site.js"></script>
+</body>
+</html>

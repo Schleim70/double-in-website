@@ -1,0 +1,4 @@
+<footer class="mobile-footer">
+  <a class="mobile-footer-brand" href="pages/Impressum.html">Double In <span>&copy; 2026</span></a>
+  <a class="mobile-footer-legal" href="pages/Impressum.html">Alle Rechte vorbehalten</a>
+</footer>

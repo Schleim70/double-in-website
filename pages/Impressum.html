@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<base href="../">
+
+
+
+    <title>Impressum - Double In</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link rel="stylesheet" media="screen and (min-width: 900px)" href="css/style.css">
+<link rel="stylesheet" media="screen and (max-width: 899px)" href="css/mobile.css">
+
+</head>
+<body>
+<div class="desktop-view">
+<div data-component="sidebar"></div>
+<div data-component="desktop-navigation"></div>
+
+    <div data-component="back-button"></div>
+
+    <main class="page-content impressum-page">
+        <header class="content-page-heading">
+            <div data-component="page-heading" data-kicker="Double In" data-title="Impressum"></div>
+        </header>
+
+        <div class="impressum-layout">
+            <div class="impressum-card address-card" role="region" aria-label="Anschrift">
+                <span class="card-eyebrow">Anschrift</span>
+                <address>
+                    <strong>Michael Friedrich</strong>
+                    <span>Double In</span>
+                    <span>Horststraße 66</span>
+                    <span>47137 Duisburg - Untermeiderich</span>
+                </address>
+            </div>
+
+            <div class="contact-cards" aria-label="Kontakt">
+                <a href="tel:020336958666" class="impressum-card contact-card">
+                    <span class="contact-card-icon" aria-hidden="true">☎</span>
+                    <span class="contact-card-copy">
+                        <span class="card-eyebrow">Telefon</span>
+                        <strong>0203 36958666</strong>
+                    </span>
+                    <span class="animated-arrow contact-card-arrow" aria-hidden="true">➜</span>
+                </a>
+                <a href="mailto:double-in@gmx.de" class="impressum-card contact-card">
+                    <span class="contact-card-icon" aria-hidden="true">@</span>
+                    <span class="contact-card-copy">
+                        <span class="card-eyebrow">Email</span>
+                        <strong>double-in@gmx.de</strong>
+                    </span>
+                    <span class="animated-arrow contact-card-arrow" aria-hidden="true">➜</span>
+                </a>
+            </div>
+        </div>
+    </main>
+</div>
+<div class="mobile-view">
+<div data-component="mobile-header"></div>
+
+<div data-component="mobile-navigation"></div>
+
+<div class="mobile-content">
+    <div data-component="page-heading" data-kicker="Double In" data-title="Impressum" data-heading-level="2" data-heading-class="mobile-page-heading" data-title-class="mobile-page-title"></div>
+
+    <!-- Adress-Karte -->
+    <div class="impressum-card">
+        <p class="impressum-card-label">Anschrift</p>
+        <p>
+            Michael Friedrich<br>
+            Double In<br>
+            Horststraße 66<br>
+            47137 Duisburg – Untermeiderich
+        </p>
+    </div>
+
+    <!-- Telefon-Button -->
+    <a href="tel:020336958666" class="contact-btn">
+        <span class="contact-btn-icon">&#128222;</span>
+        <span class="contact-btn-copy">
+            <span class="contact-btn-label">Telefon</span>
+            <span class="contact-btn-value">0203 36958666</span>
+        </span>
+        <span class="animated-arrow contact-btn-arrow" aria-hidden="true">➜</span>
+    </a>
+
+    <!-- E-Mail-Button -->
+    <a href="mailto:double-in@gmx.de" class="contact-btn">
+        <span class="contact-btn-icon">&#9993;</span>
+        <span class="contact-btn-copy">
+            <span class="contact-btn-label">E-Mail</span>
+            <span class="contact-btn-value">double-in@gmx.de</span>
+        </span>
+        <span class="animated-arrow contact-btn-arrow" aria-hidden="true">➜</span>
+    </a>
+</div>
+
+<div data-component="mobile-footer"></div>
+</div>
+<script src="js/site.js"></script>
+</body>
+</html>

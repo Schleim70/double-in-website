@@ -1,0 +1,4 @@
+<div class="page-heading" data-heading-root>
+  <span class="content-page-kicker" data-heading-kicker></span>
+  <h1 class="page-heading-title" data-heading-title></h1>
+</div>

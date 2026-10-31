@@ -1,0 +1,12 @@
+<nav class="primary-navigation" aria-label="Hauptnavigation">
+  <a class="desktop-nav-brand" href="index.html" aria-label="Double In – zur Startseite">
+    <img src="assets/images/logo.png" alt="">
+  </a>
+  <ul class="menu-schrift">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="pages/Getraenkekarte.html">Getränkekarte</a></li>
+    <li><a href="pages/Infos.html">Kalender</a></li>
+    <li><a href="pages/Oeffnungszeiten.html">Öffnungszeiten</a></li>
+    <li><a href="pages/Impressum.html">Impressum</a></li>
+  </ul>
+</nav>

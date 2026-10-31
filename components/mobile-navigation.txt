@@ -1,0 +1,7 @@
+<nav class="mobile-menu" id="mobileMenu" aria-label="Hauptnavigation">
+  <a href="index.html">Home</a>
+  <a href="pages/Getraenkekarte.html">Getränkekarte</a>
+  <a href="pages/Infos.html">Kalender</a>
+  <a href="pages/Oeffnungszeiten.html">Öffnungszeiten</a>
+  <a href="pages/Impressum.html">Impressum</a>
+</nav>

@@ -1,0 +1,6 @@
+# Operating system metadata
+.DS_Store
+._*
+
+# Local scratch work and temporary visual inspection assets
+work/

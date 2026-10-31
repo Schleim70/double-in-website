@@ -2,6 +2,10 @@ html {
   zoom: 1.1;
 }
 
+:root {
+  --layout-edge: rgba(143, 195, 255, 0.68);
+}
+
 html, body {
   background-color: #133450;
   margin: 0;
@@ -46,7 +50,7 @@ nav.primary-navigation {
   border-bottom: 2px solid rgba(143, 195, 255, 0.62);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.24);
   box-sizing: border-box;
-  display: flex;
+  display: flex !important;
   flex: 0 0 76px;
   height: 76px;
   min-height: 0;
@@ -56,15 +60,62 @@ nav.primary-navigation {
   z-index: 2;
 }
 
+nav.primary-navigation::after {
+  background: linear-gradient(90deg, transparent 0%, rgba(190, 222, 255, 0.32) 10%, rgba(190, 222, 255, 0.76) 50%, rgba(190, 222, 255, 0.32) 90%, transparent 100%);
+  box-shadow: 0 0 8px 1px rgba(143, 195, 255, 0.24);
+  content: "";
+  height: 2px;
+  left: 18px;
+  pointer-events: none;
+  position: absolute;
+  right: 18px;
+  bottom: 2px;
+}
+
+.desktop-nav-brand {
+  align-items: center;
+  border-radius: 50%;
+  display: inline-flex;
+  flex: 0 0 54px;
+  height: 54px;
+  justify-content: center;
+  margin-right: clamp(14px, 2vw, 28px);
+  overflow: hidden;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+  width: 54px;
+}
+
+.desktop-nav-brand img {
+  display: block;
+  height: 100%;
+  image-rendering: auto;
+  object-fit: contain;
+  object-position: center;
+  width: 100%;
+}
+
+.desktop-nav-brand:hover,
+.desktop-nav-brand:focus-visible {
+  box-shadow: 0 0 0 2px rgba(151, 202, 255, 0.72), 0 0 16px rgba(143, 195, 255, 0.32);
+  transform: scale(1.04);
+}
+
+.desktop-nav-brand:focus-visible {
+  outline: 2px solid #c3e4ff;
+  outline-offset: 4px;
+}
+
 .menu-schrift {
   align-items: center;
   display: flex;
-  gap: clamp(8px, 1.1vw, 20px);
-  justify-content: flex-start;
+  flex: 1 1 auto;
+  gap: clamp(10px, 1.35vw, 22px);
+  justify-content: center;
   list-style: none;
   margin: 0;
+  min-width: 0;
   padding: 0;
-  width: 100%;
+  width: auto;
 }
 
 .menu-schrift a:hover,
@@ -98,6 +149,13 @@ nav.primary-navigation {
   border-color: rgba(143, 195, 255, 0.52);
   color: white;
   transform: translateY(-1px);
+}
+
+.menu-schrift li a.is-current {
+  background: rgba(143, 195, 255, 0.17);
+  border-color: rgba(151, 202, 255, 0.62);
+  box-shadow: inset 0 -2px 0 rgba(151, 202, 255, 0.82);
+  color: #c3e4ff;
 }
 
 .menu-schrift li a:focus-visible {
@@ -144,16 +202,13 @@ section {
     width: 100%;
     height: 100vh;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     transform: translateX(0);
     background-color: #0e202f;
 }
 
 section#kneipe {
-  background-image: url("./images/kneipe.png");
-  background-size:cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background-color: #0e202f;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -167,10 +222,14 @@ section#kneipe {
 }
 
 section#kneipe::before {
-  background: linear-gradient(135deg, rgba(8, 20, 30, 0.42), rgba(8, 20, 30, 0.08) 55%, rgba(8, 20, 30, 0.3));
+  background-image: linear-gradient(135deg, rgba(8, 20, 30, 0.42), rgba(8, 20, 30, 0.08) 55%, rgba(8, 20, 30, 0.3)), url("../assets/images/kneipe.png");
+  background-position: center;
+  background-size: cover;
   content: "";
-  inset: 0;
+  filter: blur(3px);
+  inset: -8px;
   position: absolute;
+  transform: scale(1.01);
   z-index: -1;
 }
 
@@ -278,6 +337,7 @@ article {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
     width: 277px;
     position: fixed;
     top: 0;
@@ -285,13 +345,26 @@ article {
     bottom: 0;
     overflow-y: auto;
     background: radial-gradient(circle at 50% 100%, rgba(0, 150, 255, 0.1), transparent 42%), linear-gradient(180deg, #0e202f 0%, #102b3f 100%);
-    border-left: 1px solid rgba(143, 195, 255, 0.68);
-    box-shadow: -14px 0 36px rgba(0, 0, 0, 0.22), -5px 0 24px rgba(143, 195, 255, 0.38), inset 1px 0 rgba(190, 222, 255, 0.25);
+    border-left: 1px solid var(--layout-edge);
+    box-shadow: -2px 0 12px 2px rgba(143, 195, 255, 0.18), -9px 0 28px rgba(143, 195, 255, 0.1), -14px 0 36px rgba(0, 0, 0, 0.22), inset 1px 0 rgba(190, 222, 255, 0.25);
     padding: 20px;
     font-family: "Roboto", sans-serif;
     color: white;
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.48);
     text-decoration: none;
     z-index: 100;
+  }
+  .seitenleiste::before {
+    background: rgba(178, 216, 255, 0.46);
+    bottom: 0;
+    box-shadow: 0 0 10px 2px rgba(143, 195, 255, 0.22), 0 0 22px 6px rgba(143, 195, 255, 0.09);
+    content: "";
+    pointer-events: none;
+    position: fixed;
+    right: 276px;
+    top: 0;
+    width: 2px;
+    z-index: 9999;
   }
   .seitenleiste > .impressum {
     box-sizing: border-box;
@@ -318,23 +391,23 @@ article {
     text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
   }
   .sidebar-hours-list {
-    color: rgba(255, 255, 255, 0.9);
+    color: rgba(247, 250, 255, 0.97);
     display: grid;
-    font-size: 0.96rem;
-    gap: 13px;
-    line-height: 1.4;
+    font-size: 1rem;
+    gap: 12px;
+    line-height: 1.5;
     list-style: none;
     margin: 0;
     padding: 0;
-    text-shadow: 0 3px 14px rgba(0, 0, 0, 0.42);
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.42);
   }
   .sidebar-social {
     border-top: 1px solid rgba(255, 255, 255, 0.14);
-    margin-top: 26px;
-    padding-top: 20px;
+    margin-top: 20px;
+    padding-top: 16px;
   }
   .sidebar-social .socialtext {
-    font-size: 1.15rem;
+    font-size: clamp(1.45rem, 1.8vw, 1.75rem);
     margin: 0 0 16px;
     padding: 0;
     text-align: center;
@@ -352,16 +425,87 @@ article {
     object-fit: contain;
     width: 56px;
   }
+  .sidebar-shop-section {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+    border-top: 1px solid rgba(255, 255, 255, 0.16);
+    margin-top: 22px;
+    padding: 14px 0;
+  }
+  .sidebar-shop-link {
+    align-items: center;
+    background: linear-gradient(135deg, rgba(125, 188, 255, 0.2), rgba(21, 55, 78, 0.82));
+    border: 1px solid rgba(143, 195, 255, 0.42);
+    border-radius: 10px;
+    box-sizing: border-box;
+    display: flex;
+    font-size: 0.98rem;
+    font-weight: 700;
+    justify-content: space-between;
+    min-height: 54px;
+    padding: 0 15px;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.42);
+    transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+  }
+  .sidebar-shop-link:hover,
+  .sidebar-shop-link:focus-visible {
+    background: linear-gradient(135deg, rgba(125, 188, 255, 0.3), rgba(21, 55, 78, 0.96));
+    border-color: rgba(172, 213, 255, 0.74);
+    color: white;
+    transform: translateY(-1px);
+  }
+  .sidebar-shop-label {
+    align-items: center;
+    display: inline-flex;
+    gap: 10px;
+  }
+  .sidebar-shop-icon {
+    background: #f5f9ff;
+    border: 1px solid rgba(255, 255, 255, 0.75);
+    border-radius: 50%;
+    box-shadow: 0 2px 7px rgba(0, 0, 0, 0.2);
+    display: block;
+    flex: 0 0 34px;
+    height: 34px;
+    object-fit: contain;
+    width: 34px;
+  }
+  .sidebar-action-arrow {
+    animation: sidebar-arrow-nudge 1.15s ease-in-out infinite;
+    display: block;
+    flex: 0 0 23px;
+    height: 23px;
+    position: relative;
+    top: -1px;
+    width: 23px;
+  }
+  .sidebar-action-arrow path {
+    fill: none;
+    stroke: currentColor;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 3;
+  }
+  @keyframes sidebar-arrow-nudge {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(4px); }
+  }
   .sidebar-findus {
     background: linear-gradient(145deg, rgba(21, 55, 78, 0.9), rgba(8, 27, 41, 0.92));
     border: 1px solid rgba(143, 195, 255, 0.2);
     border-radius: 15px;
     box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
+    display: grid;
+    flex: 0 0 auto;
+    gap: 12px;
+    grid-template-rows: auto auto auto;
+    margin-top: 14px;
+    min-height: 0;
+    padding: 17px;
+  }
+  .sidebar-findus-copy {
     display: flex;
     flex-direction: column;
     gap: 9px;
-    margin-top: auto;
-    padding: 17px;
   }
   .sidebar-findus-kicker {
     color: rgba(160, 207, 255, 0.88);
@@ -370,42 +514,77 @@ article {
     letter-spacing: 0.12em;
     text-transform: uppercase;
   }
-  .sidebar-findus > strong {
+  .sidebar-findus-copy > strong {
     color: white;
     font-size: 1.12rem;
     line-height: 1.25;
   }
   .sidebar-findus p {
-    color: rgba(231, 241, 250, 0.82);
+    color: rgba(244, 248, 253, 0.94);
     font-family: "Roboto", Arial, sans-serif;
-    font-size: 0.88rem;
+    font-size: 0.96rem;
     line-height: 1.5;
     margin: 0 0 4px;
-    text-shadow: none;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.48);
+  }
+  .sidebar-findus-note {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    gap: 8px;
+    line-height: 1.4;
+    min-width: 0;
+    padding: 2px 0;
+  }
+  .sidebar-findus-note > strong {
+    color: #f4f8fd;
+    display: block;
+    font-size: 0.94rem;
+    font-weight: 600;
+    line-height: 1.4;
+    opacity: 1;
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.55);
+    visibility: visible;
+    min-width: 0;
+  }
+  .sidebar-findus-note svg {
+    color: rgba(145, 202, 255, 0.82);
+    display: block;
+    flex: 0 0 19px;
+    height: 19px;
+    width: 19px;
+  }
+  .sidebar-findus-note svg path,
+  .sidebar-findus-note svg circle {
+    fill: none;
+    stroke: currentColor;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 1.8;
   }
   .sidebar-findus .sidebar-action {
     align-items: center;
     border: 1px solid rgba(143, 195, 255, 0.28);
     border-radius: 9px;
     display: flex;
-    font-size: 0.86rem;
+    font-size: 0.92rem;
     font-weight: 700;
     justify-content: space-between;
     min-height: 40px;
     padding: 0 11px;
-    text-shadow: none;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.42);
   }
   .sidebar-findus .sidebar-route {
     background: rgba(125, 188, 255, 0.16);
-  }
-  .sidebar-findus .sidebar-calendar {
-    background: rgba(5, 19, 30, 0.24);
   }
   .sidebar-findus .sidebar-action:hover,
   .sidebar-findus .sidebar-action:focus-visible {
     background: rgba(125, 188, 255, 0.24);
     border-color: rgba(172, 213, 255, 0.7);
     color: white;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .sidebar-action-arrow { animation: none; }
   }
   .socialtext {
     margin-left: 45px;
@@ -540,26 +719,34 @@ li {
   display: flex;
   flex: 1;
   flex-direction: column;
-  gap: 18px;
-  height: 100vh;
-  max-width: 1100px;
+  gap: 10px;
+  height: calc(100vh - 76px);
+  max-width: none;
+  min-height: 0;
   min-width: 0;
-  padding: 32px 32px 28px;
-  width: calc(100% - 317px);
+  overflow: hidden;
+  padding: clamp(48px, 5.4vh, 56px) clamp(24px, 4vw, 64px) 10px;
+  width: calc(100% - 277px);
 }
 
 .calendar-page-heading {
   flex: 0 0 auto;
-  padding-top: 56px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1060px;
+  padding-top: 0;
+  width: 100%;
 }
 
 .calendar-page-heading h1 {
   color: white;
   font-family: "Roboto", Arial, sans-serif;
-  font-size: clamp(2rem, 3vw, 3rem);
-  font-weight: 700;
-  margin: 0;
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.45);
+  font-size: clamp(2.3rem, 4vw, 3.5rem);
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  line-height: 1.05;
+  margin: 0 0 12px;
+  text-shadow: 0 8px 28px rgba(0, 0, 0, 0.28);
 }
 
 .calendar-page-heading p {
@@ -575,32 +762,58 @@ li {
   border-radius: 12px;
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.24);
   flex: 0 1 auto;
-  height: clamp(420px, 62vh, 620px);
-  max-width: 1000px;
+  height: clamp(400px, 62vh, 620px);
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1060px;
   min-height: 0;
   overflow: hidden;
+  width: 100%;
 }
 
 .calendar-card iframe {
   border: 0;
   display: block;
   height: 100%;
-  min-height: 400px;
+  min-height: 0;
   width: 100%;
 }
 
 .calendar-open-link {
-  align-self: flex-start;
-  color: rgba(255, 255, 255, 0.85);
+  align-self: center;
+  align-items: center;
+  background: linear-gradient(135deg, #1b5275, #153c59);
+  border: 1px solid rgba(143, 195, 255, 0.46);
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(2, 13, 22, 0.2);
+  color: #eaf6ff;
+  display: inline-flex;
   font-family: "Roboto", sans-serif;
-  font-size: 0.95rem;
-  text-decoration: underline;
-  text-underline-offset: 3px;
+  font-size: 1rem;
+  font-weight: 700;
+  gap: 24px;
+  justify-content: space-between;
+  min-height: 42px;
+  max-width: 100%;
+  padding: 0 16px;
+  text-decoration: none;
+  transition: background-color 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease, transform 0.18s ease;
+  width: max-content;
 }
 
 .calendar-open-link:hover,
 .calendar-open-link:focus-visible {
-  color: rgba(0, 150, 255, 0.9);
+  background: linear-gradient(135deg, #24658d, #194a6c);
+  border-color: rgba(184, 220, 255, 0.82);
+  box-shadow: 0 10px 24px rgba(2, 13, 22, 0.28), 0 0 18px rgba(143, 195, 255, 0.14);
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+.calendar-open-arrow {
+  color: #a9d8ff;
+  font-size: 1.15rem;
+  line-height: 1;
 }
 
 .line {
@@ -646,35 +859,67 @@ color: rgba(0, 150, 255, 0.8);
 
 .back-button {
   position: fixed;
-  top: 20px;
+  top: 88px;
   left: 20px;
   z-index: 1000;
+  display: inline-flex;
+  gap: 5px;
 }
 
-.back-button a {
-  display: inline-block;
+.back-button button {
+  align-items: center;
+  appearance: none;
+  display: inline-flex;
   box-sizing: border-box;
-  min-height: 48px;
-  padding: 12px 20px;
-  font-size: 18px;
-  font-family: Arial, sans-serif;
-  text-decoration: none;
+  height: 38px;
+  justify-content: center;
+  width: 38px;
+  padding: 0;
+  line-height: 0;
   color: white;
-  background-color: #0e202f; 
-  border: 2px solid rgba(0, 150, 255, 0.7); 
-  border-radius: 5px;
-  transition: all 0.3s ease-in-out;
+  background: rgba(14, 32, 47, 0.94);
+  border: 1px solid rgba(143, 195, 255, 0.44);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.18s ease, border-color 0.18s ease, transform 0.18s ease;
 }
 
-.back-button a:hover {
-  background-color: rgba(0, 150, 255, 0.7); 
-  color: white;
-  box-shadow: 0 0 1rem rgba(0, 150, 255, 0.7);
-  transform: scale(1.05);
+.back-button button svg {
+  display: block;
+  flex: 0 0 20px;
+  height: 20px;
+  position: relative;
+  top: -1px;
+  width: 20px;
 }
 
-.back-button a:focus-visible {
-  outline: 3px solid white;
+.back-button button svg path {
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2.5;
+}
+
+.back-button button:hover {
+  background-color: #17415d;
+  border-color: rgba(143, 195, 255, 0.82);
+  color: white;
+  transform: translateY(-1px);
+}
+
+.back-button button:disabled {
+  background: rgba(14, 32, 47, 0.52);
+  border-color: rgba(143, 195, 255, 0.15);
+  box-shadow: none;
+  color: rgba(222, 235, 247, 0.34);
+  cursor: not-allowed;
+  opacity: 0.6;
+  transform: none;
+}
+
+.back-button button:focus-visible {
+  outline: 2px solid rgba(207, 230, 250, 0.92);
   outline-offset: 3px;
 }
 
@@ -696,8 +941,8 @@ color: rgba(0, 150, 255, 0.8);
   }
 
   .calendar-page {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: clamp(24px, 4vw, 64px);
+    padding-right: clamp(24px, 4vw, 64px);
     width: calc(100% - 277px);
   }
 }
@@ -730,26 +975,30 @@ color: rgba(0, 150, 255, 0.8);
 /* Desktop contact and opening-hours pages */
 .page-content {
   box-sizing: border-box;
-  height: 100vh;
-  min-height: 100vh;
+  height: calc(100vh - 76px);
+  min-height: calc(100vh - 76px);
   overflow-y: auto;
-  padding: clamp(96px, 12vh, 132px) clamp(28px, 5vw, 84px) 52px;
+  padding: clamp(48px, 5.4vh, 56px) clamp(28px, 5vw, 84px) 52px;
   position: relative;
   width: calc(100% - 277px);
   z-index: 1;
 }
 
-.content-page-heading,
 .impressum-layout,
 .hours-panel {
   margin-left: auto;
   margin-right: auto;
-  max-width: 920px;
+  max-width: 1060px;
+  width: 100%;
 }
 
 .content-page-heading {
   margin-bottom: 38px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1060px;
   position: relative;
+  width: 100%;
   z-index: 2;
 }
 
@@ -780,7 +1029,7 @@ color: rgba(0, 150, 255, 0.8);
 }
 
 .impressum-layout {
-  align-items: start;
+  align-items: stretch;
   display: grid;
   gap: 20px;
   grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
@@ -952,7 +1201,7 @@ color: rgba(0, 150, 255, 0.8);
 
 @media screen and (max-height: 760px) {
   .page-content {
-    padding-top: 82px;
+    padding-top: 48px;
   }
 }
 
@@ -965,10 +1214,10 @@ color: rgba(0, 150, 255, 0.8);
 
 .gk-wrap {
   box-sizing: border-box;
-  height: 100vh;
+  height: calc(100vh - 76px);
   margin: 0;
   overflow-y: auto;
-  padding: clamp(120px, 13vh, 140px) clamp(24px, 4vw, 64px) 48px;
+  padding: clamp(48px, 5.4vh, 56px) clamp(24px, 4vw, 64px) 48px;
   width: calc(100% - 277px);
 }
 
@@ -984,15 +1233,11 @@ color: rgba(0, 150, 255, 0.8);
   text-align: left;
 }
 
-.gk-header::before {
-  color: rgba(87, 190, 255, 0.95);
-  content: "DOUBLE IN";
-  display: block;
-  font-family: "Roboto", Arial, sans-serif;
-  font-size: 0.78rem;
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  margin-bottom: 12px;
+.desktop-view .page-heading {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1060px;
+  width: 100%;
 }
 
 .gk-header h1 {
@@ -1015,6 +1260,7 @@ color: rgba(0, 150, 255, 0.8);
   font-family: "Roboto", Arial, sans-serif;
   font-size: 0.88rem;
   font-weight: 700;
+  margin-left: clamp(24px, 2.5vw, 40px);
   padding: 8px 13px;
 }
 
@@ -1172,7 +1418,7 @@ color: rgba(0, 150, 255, 0.8);
   }
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 899px) {
   .gk-columns {
     grid-template-columns: minmax(0, 1fr);
   }
@@ -1180,4 +1426,10 @@ color: rgba(0, 150, 255, 0.8);
   .gk-footnotes {
     grid-column: auto;
   }
+}
+
+/* Keep the two page compositions strictly separated at the desktop breakpoint. */
+@media screen and (min-width: 900px) {
+  .desktop-view { display: contents !important; }
+  .mobile-view { display: none !important; }
 }

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<base href="../">
+
+
+
+    <title>Öffnungszeiten - Double In</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link rel="stylesheet" media="screen and (min-width: 900px)" href="css/style.css">
+<link rel="stylesheet" media="screen and (max-width: 899px)" href="css/mobile.css">
+
+<style>
+@media (max-width: 899px) {
+
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .mobile-content {
+            flex: 1;
+        }
+
+}
+</style>
+
+</head>
+<body>
+<div class="desktop-view">
+<div data-component="sidebar"></div>
+<div data-component="desktop-navigation"></div>
+
+    <div data-component="back-button"></div>
+
+    <main class="page-content hours-page">
+        <header class="content-page-heading">
+            <div data-component="page-heading" data-kicker="Double In" data-title="Öffnungszeiten"></div>
+        </header>
+
+        <div class="hours-panel" role="region" aria-label="Öffnungszeiten">
+            <div class="hours-row"><span class="hours-day">Montag</span><span class="hours-time">Ruhetag</span></div>
+            <div class="hours-row"><span class="hours-day">Dienstag</span><span class="hours-time">14:00 – 23:00 Uhr</span></div>
+            <div class="hours-row"><span class="hours-day">Mittwoch</span><span class="hours-time">14:00 – 23:00 Uhr</span></div>
+            <div class="hours-row"><span class="hours-day">Donnerstag</span><span class="hours-time">14:00 – 23:00 Uhr</span></div>
+            <div class="hours-row"><span class="hours-day">Freitag</span><span class="hours-time">12:00 – Open End</span></div>
+            <div class="hours-row"><span class="hours-day">Samstag</span><span class="hours-time">14:00 – Open End</span></div>
+            <div class="hours-row"><span class="hours-day">Sonntag</span><span class="hours-time">Nur bei Auswärtsspiel MSV</span></div>
+        </div>
+    </main>
+</div>
+<div class="mobile-view">
+<div data-component="mobile-header"></div>
+
+<div data-component="mobile-navigation"></div>
+
+<div class="mobile-content">
+    <div data-component="page-heading" data-kicker="Double In" data-title="Öffnungszeiten" data-heading-level="2" data-heading-class="mobile-page-heading" data-title-class="mobile-page-title"></div>
+    <div class="mobile-hours">
+        <div class="mobile-hours-row">
+            <span>Montag</span><span>Ruhetag</span>
+        </div>
+        <div class="mobile-hours-row">
+            <span>Dienstag</span><span>14:00 – 23:00 Uhr</span>
+        </div>
+        <div class="mobile-hours-row">
+            <span>Mittwoch</span><span>14:00 – 23:00 Uhr</span>
+        </div>
+        <div class="mobile-hours-row">
+            <span>Donnerstag</span><span>14:00 – 23:00 Uhr</span>
+        </div>
+        <div class="mobile-hours-row">
+            <span>Freitag</span><span>12:00 – Open End</span>
+        </div>
+        <div class="mobile-hours-row">
+            <span>Samstag</span><span>14:00 – Open End</span>
+        </div>
+        <div class="mobile-hours-row">
+            <span>Sonntag</span><span>Nur bei Auswärtsspiel MSV</span>
+        </div>
+    </div>
+
+    <h2 class="mobile-page-title" style="margin-top: 32px;">Social Media</h2>
+    <div class="mobile-social">
+        <a href="https://facebook.com/profile.php?id=100094139119700&locale=de_DE" target="_blank">
+            <img src="assets/images/facebook-icon.png" alt="Facebook" class="social-icon">
+        </a>
+        <a href="https://instagram.com/double.in/" target="_blank">
+            <img src="assets/images/instagram-icon.png" alt="Instagram" class="social-icon">
+        </a>
+        <a href="https://google.de/maps/place/Double+In+-+Duisburg/@51.4691121,6.7481939,17z" target="_blank">
+            <img src="assets/images/maps-icon.png" alt="Google-Maps" class="social-icon">
+        </a>
+    </div>
+</div>
+
+<div data-component="mobile-footer"></div>
+</div>
+<script src="js/site.js"></script>
+</body>
+</html>
