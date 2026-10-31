@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Protest+Guerrilla&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Infos - Double In</title>
+    <title>Kalender - Double In</title>
     <link rel="stylesheet" href="css/styles.css">
 <script>
   if (window.innerWidth <= 768) {
@@ -18,51 +18,27 @@
 </script>
 </head>
 <body>
-    <nav class="seitenleiste">   
-            <ul>
-            <a href="Impressum.html" class="impressum" style="font-size: 20px;">Impressum</a></li>
-            </ul>
-        </div>             
-        <ul> <a href="Oeffnungszeiten.html" class="oeffnungszeiten">Öffnungszeiten</a> </ul>
-        <div> <ul class="Montag-Sonntag"></ul>
-        <li>  <ul class="montag" style="list-style: none;">Montag: Ruhetag</ul>
-        </li>
-        <li>  <ul class="dienstag" style="list-style: none;">Dienstag:   14 Uhr - 23 Uhr</ul>
-        </li>
-        <li>  <ul class="mittwoch" style="list-style: none;">Mittwoch:   14 Uhr - 23 Uhr</ul>
-        </li>
-        <li>  <ul class="donnerstag" style="list-style: none;">Donnerstag: 14 Uhr - 23 Uhr</ul>
-        </li>
-        <li>  <ul class="freitag" style="list-style: none;">Freitag:    12 Uhr - Open-End</ul>
-        </li>  
-        <li>  <ul class="samstag" style="list-style: none;">Samstag:    14 Uhr - Open-End</ul>
-        </li>
-        <li>  <ul class="sonntag" style="list-style: none;">Sonntag: Nur wenn Auswärtsspiel MSV</ul>
-        </li>     
-    </div>
-    <h2 Class = socialtext>
-        Social Media:
-    </h2>
-
-    <div class="social-media-icons">
-        <a href="https://facebook.com/profile.php?id=100094139119700&locale=de_DE" target="_blank">
-            <img src="images/facebook-icon.png" alt="Facebook" class="social-icon">
-        </a>
-        <a href="https://instagram.com/double.in/" target="_blank">
-            <img src="images/instagram-icon.png" alt="Instagram" class="social-icon">
-        </a>
-        <a href="https://google.de/maps/place/Double+In+-+Duisburg/@51.4691121,6.7481939,17z/data=!3m1!4b1!4m6!3m5!1s0x47b8bffb0b823dfd:0xc6cf0dec1f29823!8m2!3d51.4691088!4d6.7507688!16s%2Fg%2F11v9j_82h4?entry=ttu&g_ep=EgoyMDI1MDMwNC4wIKXMDSoASAFQAw%3D%3D" target="_blank">
-            <img src="images/maps-icon.png" alt="Google-Maps" class="social-icon">
-        </a>
-    </div>          
-    </div>         
+    <div data-sidebar></div>
     <div class="back-button">
         <a href="index.html">« Zurück</a>
     </div>
-</nav>
-<iframe src="https://calendar.google.com/calendar/embed?src=d7c7e1237b6e298e0347fb7cff2fc3ee5ace851c7f5a76e2d0da0550deb7a4b1%40group.calendar.google.com&ctz=Europe%2FBerlin" style="border: 0" width="800" height="600" frameborder="0" scrolling="no" class="kalender"></iframe>
+<main class="calendar-page">
+    <header class="calendar-page-heading">
+        <h1>Kalender</h1>
+        <p>Alle kommenden Termine im Überblick.</p>
+    </header>
+    <div class="calendar-card" role="region" aria-label="Veranstaltungskalender">
+        <iframe
+            title="Google Kalender – Double In"
+            src="https://calendar.google.com/calendar/embed?src=d7c7e1237b6e298e0347fb7cff2fc3ee5ace851c7f5a76e2d0da0550deb7a4b1%40group.calendar.google.com&amp;ctz=Europe%2FBerlin&amp;mode=MONTH&amp;showTitle=0&amp;showNav=1&amp;showDate=1&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;bgcolor=%230e202f"
+            loading="lazy">
+        </iframe>
+    </div>
+    <a class="calendar-open-link" href="https://calendar.google.com/calendar/u/0?cid=d7c7e1237b6e298e0347fb7cff2fc3ee5ace851c7f5a76e2d0da0550deb7a4b1%40group.calendar.google.com" target="_blank" rel="noopener noreferrer">
+        Kalender in Google öffnen
+    </a>
+</main>
     
-    <div class="social-media-icons">
 <script src="scripts.js"></script>
 
 <!---------------MOBILE--------------->
@@ -77,8 +53,7 @@
   <div class="mobile-menu" id="mobileMenu">
     <a href="index.html">Home</a>
     <a href="Getraenkekarte.html">Getränkekarte</a>
-    <a href="Infos.html">Informationen</a>
-    <a href="Events.html">Events</a>
+    <a href="Infos.html">Kalender</a>
   </div>
 
 

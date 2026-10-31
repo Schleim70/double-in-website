@@ -14,142 +14,7 @@
             if (window.innerWidth > 768) window.location.replace("Getraenkekarte.html");
         });
     </script>
-    <style>
-        body {
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-        .mobile-content { flex: 1; }
 
-        .neue-preise {
-            text-align: center;
-            color: #e53935;
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 0.85rem;
-            font-weight: 700;
-            margin: 0 0 16px;
-            letter-spacing: 0.3px;
-        }
-
-        .gk-section {
-            margin-bottom: 24px;
-        }
-
-        .gk-section-title {
-            color: white;
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 1rem;
-            font-weight: 700;
-            margin: 0 0 8px;
-            padding-bottom: 6px;
-            border-bottom: 1px solid rgba(0, 150, 255, 0.4);
-        }
-
-        .gk-section-price-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            margin: 0 0 8px;
-            padding-bottom: 6px;
-            border-bottom: 1px solid rgba(0, 150, 255, 0.4);
-        }
-        .gk-section-price-header .gk-section-title {
-            margin: 0;
-            border: none;
-            padding: 0;
-        }
-        .gk-section-price-header .gk-flat-price {
-            color: white;
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 1rem;
-            font-weight: 700;
-        }
-
-        .gk-row {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            padding: 7px 0;
-            border-bottom: 1px solid rgba(255,255,255,0.06);
-            gap: 8px;
-        }
-        .gk-row:last-child { border-bottom: none; }
-
-        .gk-name {
-            color: rgba(255,255,255,0.9);
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 0.9rem;
-            flex: 1;
-        }
-        .gk-sub {
-            color: rgba(255,255,255,0.5);
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 0.75rem;
-        }
-        .gk-size {
-            color: rgba(255,255,255,0.5);
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 0.82rem;
-            text-align: right;
-            min-width: 60px;
-        }
-        .gk-price {
-            color: white;
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 0.9rem;
-            font-weight: 700;
-            text-align: right;
-            min-width: 44px;
-        }
-
-        .gk-list-item {
-            color: rgba(255,255,255,0.85);
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 0.9rem;
-            padding: 5px 0;
-            border-bottom: 1px solid rgba(255,255,255,0.06);
-        }
-        .gk-list-item:last-child { border-bottom: none; }
-
-        .gk-longdrink {
-            display: flex;
-            justify-content: space-between;
-            padding: 7px 0;
-            border-bottom: 1px solid rgba(255,255,255,0.06);
-        }
-        .gk-longdrink:last-child { border-bottom: none; }
-        .gk-longdrink span:first-child {
-            color: rgba(255,255,255,0.9);
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 0.9rem;
-            font-weight: 700;
-        }
-        .gk-longdrink span:last-child {
-            color: white;
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 0.9rem;
-            font-weight: 700;
-        }
-
-        .gk-anfrage {
-            color: rgba(255,255,255,0.6);
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 0.85rem;
-            font-style: italic;
-            padding: 6px 0;
-        }
-
-        .gk-footnotes {
-            color: rgba(255,255,255,0.35);
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 0.7rem;
-            line-height: 1.6;
-            margin-top: 24px;
-            padding-top: 12px;
-            border-top: 1px solid rgba(255,255,255,0.1);
-        }
-    </style>
 </head>
 <body>
 
@@ -166,51 +31,51 @@
 <div class="mobile-menu" id="mobileMenu">
     <a href="index-mobile.html">Home</a>
     <a href="Getraenkekarte-mobile.html">Getränkekarte</a>
-    <a href="Infos-mobile.html">Informationen</a>
+    <a href="Infos-mobile.html">Kalender</a>
     <a href="Oeffnungszeiten-mobile.html">Öffnungszeiten</a>
     <a href="Impressum-mobile.html">Impressum</a>
 </div>
 
 <div class="mobile-content">
     <h2 class="mobile-page-title">Getränkekarte</h2>
-    <p class="neue-preise">Neue Preise ab 01.04.2026</p>
+    <p class="neue-preise">Neue Preise ab 15.09.2026</p>
 
     <!-- BIERE -->
     <div class="gk-section">
         <div class="gk-section-title">Biere</div>
         <div class="gk-row">
-            <div class="gk-name">König Pilsener / Diebels Alt</div>
+            <div class="gk-name">König Pilsener</div>
             <div style="text-align:right">
                 <div style="display:flex;gap:12px;justify-content:flex-end">
-                    <span class="gk-size">0,2 l</span><span class="gk-price">1,90 €</span>
+                    <span class="gk-size">0,2 l</span><span class="gk-price">2,00 €</span>
                 </div>
                 <div style="display:flex;gap:12px;justify-content:flex-end">
-                    <span class="gk-size">0,3 l</span><span class="gk-price">2,80 €</span>
+                    <span class="gk-size">0,3 l</span><span class="gk-price">3,00 €</span>
                 </div>
                 <div style="display:flex;gap:12px;justify-content:flex-end">
-                    <span class="gk-size">0,5 l</span><span class="gk-price">4,70 €</span>
+                    <span class="gk-size">0,5 l</span><span class="gk-price">5,00 €</span>
                 </div>
             </div>
         </div>
         <div class="gk-row">
             <span class="gk-name">König Pilsener alkoholfrei</span>
             <span class="gk-size">Fl. 0,33 l</span>
-            <span class="gk-price">2,80 €</span>
+            <span class="gk-price">3,00 €</span>
         </div>
         <div class="gk-row">
             <span class="gk-name">Weizen</span>
             <span class="gk-size">Fl. 0,5 l</span>
-            <span class="gk-price">4,50 €</span>
+            <span class="gk-price">4,70 €</span>
         </div>
         <div class="gk-row">
             <span class="gk-name">Weizen alkoholfrei</span>
             <span class="gk-size">Fl. 0,5 l</span>
-            <span class="gk-price">4,50 €</span>
+            <span class="gk-price">4,70 €</span>
         </div>
         <div class="gk-row">
             <span class="gk-name">Malzbier <span class="gk-sub">11) El)</span></span>
             <span class="gk-size">Fl. 0,33 l</span>
-            <span class="gk-price">2,80 €</span>
+            <span class="gk-price">3,00 €</span>
         </div>
     </div>
 
@@ -265,12 +130,12 @@
         <div class="gk-row">
             <span class="gk-name">Wasser Gerolsteiner<br><span class="gk-sub">- classic, medium, still -</span></span>
             <span class="gk-size">Fl. 0,25 l</span>
-            <span class="gk-price">2,20 €</span>
+            <span class="gk-price">2,30 €</span>
         </div>
         <div class="gk-row">
             <span class="gk-name">Apfelschorle</span>
             <span class="gk-size">Fl. 0,25 l</span>
-            <span class="gk-price">2,20 €</span>
+            <span class="gk-price">2,30 €</span>
         </div>
         <div class="gk-row">
             <span class="gk-name">Orangensaft</span>
@@ -303,7 +168,7 @@
     <div class="gk-section">
         <div class="gk-section-price-header">
             <div class="gk-section-title">Spirituosen 2 cl</div>
-            <div class="gk-flat-price">2,00 €</div>
+            <div class="gk-flat-price">2,20 €</div>
         </div>
         <div class="gk-list-item">Waldgeist grün</div>
         <div class="gk-list-item">Wodka Gorbatschow</div>

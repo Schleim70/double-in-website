@@ -3,96 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impressum - Double In</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Protest+Guerrilla&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Impressum - Double In</title>
-    <link rel="stylesheet" href="css/styles.css">
-<script>
-  if (window.innerWidth <= 768) {
-    window.location.replace("Impressum-mobile.html");
-  }
-</script>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Protest+Guerrilla&family=Roboto:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        if (window.innerWidth <= 768) {
+            window.location.replace("Impressum-mobile.html");
+        }
+    </script>
 </head>
 <body>
-    <nav class="seitenleiste">   
-            <ul>
-            <a href="Impressum.html" class="impressum" style="font-size: 20px;">Impressum</a></li>
-            </ul>
-        </div>             
-        <ul> <a href="Oeffnungszeiten.html" class="oeffnungszeiten">Öffnungszeiten</a> </ul>
-        <div> <ul class="Montag-Sonntag"></ul>
-        <li>  <ul class="montag" style="list-style: none;">Montag: Ruhetag</ul>
-        </li>
-        <li>  <ul class="dienstag" style="list-style: none;">Dienstag:   14 Uhr - 23 Uhr</ul>
-        </li>
-        <li>  <ul class="mittwoch" style="list-style: none;">Mittwoch:   14 Uhr - 23 Uhr</ul>
-        </li>
-        <li>  <ul class="donnerstag" style="list-style: none;">Donnerstag: 14 Uhr - 23 Uhr</ul>
-        </li>
-        <li>  <ul class="freitag" style="list-style: none;">Freitag:    12 Uhr - Open-End</ul>
-        </li>  
-        <li>  <ul class="samstag" style="list-style: none;">Samstag:    14 Uhr - Open-End</ul>
-        </li>
-        <li>  <ul class="sonntag" style="list-style: none;">Sonntag: Nur wenn Auswärtsspiel MSV</ul>
-        </li>     
-    </div>
-    <h2 Class = socialtext>
-        Social Media:
-    </h2>
+    <div data-sidebar></div>
 
-    <div class="social-media-icons">
-        <a href="https://facebook.com/profile.php?id=100094139119700&locale=de_DE" target="_blank">
-            <img src="images/facebook-icon.png" alt="Facebook" class="social-icon">
-        </a>
-        <a href="https://instagram.com/double.in/" target="_blank">
-            <img src="images/instagram-icon.png" alt="Instagram" class="social-icon">
-        </a>
-        <a href="https://google.de/maps/place/Double+In+-+Duisburg/@51.4691121,6.7481939,17z/data=!3m1!4b1!4m6!3m5!1s0x47b8bffb0b823dfd:0xc6cf0dec1f29823!8m2!3d51.4691088!4d6.7507688!16s%2Fg%2F11v9j_82h4?entry=ttu&g_ep=EgoyMDI1MDMwNC4wIKXMDSoASAFQAw%3D%3D" target="_blank">
-            <img src="images/maps-icon.png" alt="Google-Maps" class="social-icon">
-        </a>
-    </div>          
-    </div>         
     <div class="back-button">
         <a href="index.html">« Zurück</a>
     </div>
-</nav>
 
-    <article style="text-align: center; margin-top: 150px; margin-left: 500px;">
-        <p>
-            Michael Friedrich<br>
-            Double In<br>
-            Horststraße 66<br>
-            47137 Duisburg - Untermeiderich<br>
-        </p>
-        <p>
-            Tel: <a href="tel:020336958666" style="color: rgb(131, 131, 255); text-decoration: underline;">0203 36958666</a><br>
-            Email: <a href="mailto:double-in@gmx.de" style="color: rgb(131, 131, 255); text-decoration: underline;">double-in@gmx.de</a>
-        </p>
-    </article>
+    <main class="page-content impressum-page">
+        <header class="content-page-heading">
+            <span class="content-page-kicker">Double In</span>
+            <h1>Impressum</h1>
+        </header>
 
-<script src="scripts.js"></script>
+        <div class="impressum-layout">
+            <div class="impressum-card address-card" role="region" aria-label="Anschrift">
+                <span class="card-eyebrow">Anschrift</span>
+                <address>
+                    <strong>Michael Friedrich</strong>
+                    <span>Double In</span>
+                    <span>Horststraße 66</span>
+                    <span>47137 Duisburg - Untermeiderich</span>
+                </address>
+            </div>
 
-<!---------------MOBILE--------------->
+            <div class="contact-cards" aria-label="Kontakt">
+                <a href="tel:020336958666" class="impressum-card contact-card">
+                    <span class="contact-card-icon" aria-hidden="true">☎</span>
+                    <span class="contact-card-copy">
+                        <span class="card-eyebrow">Telefon</span>
+                        <strong>0203 36958666</strong>
+                    </span>
+                    <span class="contact-card-arrow" aria-hidden="true">↗</span>
+                </a>
+                <a href="mailto:double-in@gmx.de" class="impressum-card contact-card">
+                    <span class="contact-card-icon" aria-hidden="true">@</span>
+                    <span class="contact-card-copy">
+                        <span class="card-eyebrow">Email</span>
+                        <strong>double-in@gmx.de</strong>
+                    </span>
+                    <span class="contact-card-arrow" aria-hidden="true">↗</span>
+                </a>
+            </div>
+        </div>
+    </main>
 
-
-<div class="burger" onclick="toggleMobileMenu()">
-    <div class="line"></div>
-    <div class="line"></div>
-    <div class="line"></div>
-  </div>
-  
-  <div class="mobile-menu" id="mobileMenu">
-    <a href="index.html">Home</a>
-    <a href="Getraenkekarte.html">Getränkekarte</a>
-    <a href="Infos.html">Informationen</a>
-    <a href="Events.html">Events</a>
-  </div>
-
-
-<!---------------MOBILE--------------->
+    <script src="scripts.js"></script>
 </body>
 </html>
